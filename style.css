@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #faf8ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 20px;
+    /* text-align: center;
+    padding: 10px;
+    margin-top: 20px; */
+}
+
+h1 {
+    font-size: 48px;
+    color: #8f7a66;
+}
+
+.grid {
+    --row: 4;
+    --col: 20vmin;
+    --gap: 2vmin;
+
+    background: #bbada0;
+    border-radius: 1vmin;
+    display: grid;
+    grid-template-columns: repeat(var(--row), var(--col));
+    grid-template-rows: repeat(var(--row), var(--col));
+    gap: var(--gap);
+    position: relative;
+    padding: var(--gap);
+    /* --var-top:20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background: #bbada0;
+    margin-top: var(--var-top);
+    margin-inline: auto;
+    width: 480px;
+    height: 480px; */
+}
+
+.box {
+    /* background: #776e65; */
+    background-color:hsl(200, 50%, 20%);
+    border-radius: 1vmin;
+    border-radius: 1vmin;
+    font-size: 7.5vmin;
+    color: #eee4da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 100ms ease-in-out;
+    box-shadow: 0 0 5px black;
+    /* --var-x :0;
+    --var-y :0;
+    --var-margin:10px;
+    background: #776e65;
+    color:#eee4da ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    font-size: 60px;
+    box-shadow: 0 0  5px black; */
+}
+
+.tile {
+    --x:3;
+    --y:3;
+    background-color:hsl(200, 42%, 46%);
+    border-radius: 1vmin;
+    position: absolute;
+    font-size: 7.5vmin;
+    color: #eee4da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--col);
+    height: var(--col);
+    top: calc(var(--y) * (var(--col) + var(--gap)) + var(--gap));
+    left: calc(var(--x) * (var(--col) + var(--gap)) + var(--gap));
+    transition: 100ms ease-in-out;
+}
+
+.win {
+    background: #98D8AA;
+    color: black;
+}
